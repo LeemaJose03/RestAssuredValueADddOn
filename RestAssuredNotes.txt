@@ -1,0 +1,195 @@
+Day 1:RestAssured Introduction and Environment Setup
+----------------------------------------------------
+API Testing Introduction
+Why RestAssered & Advantages 
+Environment Setup
+HTTP Methods
+Creating POST request payload
+
+Client Server:
+
+Client : From where we are accessing the server. 
+Server: application will be present here.
+
+When we request anything from client, it will send the request to server and provides us the response.
+
+Client/Server Architecture:
+
+1- Tier Architecture:
+	- If the client and server runs in same machine. 
+
+2- Tier: 
+	Client and server database will be present in different system. 
+
+3-Tier: 
+Client Tier
+
+Business logic
+
+Database Tier
+
+
+Presentation Layer (UI)   --> Web Browser testing
+	|
+Application Layer (Program code) --> API Testing
+	|
+Database Layer (holds the data)  --> Database Testing
+
+What is API?
+	Application Programming Interface
+
+API VS Webservices:
+
+API that is available in the net/web -> Webservice
+
+All webservices are API's, but all the API's are not web.
+
+Once the API's are developed and tested they will be moved to internet and they are called as webservice.
+
+2 types of API's:
+
+1) Simple Object Access Protocol (SOAP)  -> old technology , supports only XML. 
+2) REST API(Representational State Transfer) -> latest , supports XML and HTML
+
+http vs https:
+
+http -> without encryption the data is sent to server, which is not secure.
+https -> data will be encrypted. Secure. 
+
+Terminologies:
+
+URL -> Uniform Resource Locator
+URI -> Uniform Resource Identifier
+URN -> Uniform Resource Name
+
+Payload: 
+Data that we are sending along with the request -> Request payload
+Data that we are getting with reponse -> Response payload
+
+Rest API Methods:
+
+-> Get  --> get the response from the server
+-> Post --> sending our data to server to store.
+-> Put --> update the exsisting data
+-> Delete  --> delete the data from database.
+
+Rest Assured:
+	It's an API through which we can automate REST API.
+	By default it supports BDD style.
+
+Pre-requisites:
+-> Java and Ecplise --> at least java 9+ version is needed.
+-> TestNG Framework 
+-> Maven -> to add the rest assured dependency. 
+
+Dependency needed:
+
+Rest-assured
+json-path
+json
+gson
+testng 
+scriblejava-apis  --> to pass random data
+json-schema-validtor
+xml-schema-validator
+
+Gerkin Keywords:
+1)given()  --> pre-requsite --> add authentication, add parm, content type etc.,
+2)when()  --> condition , the type of request. 
+3)then()  --> validation of the response received. 
+
+4) And() --> 
+
+Get:
+https://reqres.in/api/user?page=2
+
+Put:
+https://reqres.in/api/users/2
+
+
+/* 4 ways we can create request body
+	 * 1) using HashMap
+	 * 2) using org.json
+	 * 3) using POJO class ( Plain Java Old Object)
+	 * 4) using external json file
+	 */
+
+
+Day 2:Feature in RestAssured
+----------------------------
+Cookies and Headers
+Query and Path parameter
+Logging, Parsing response body
+Parsing XML response body
+
+get:
+https://reqres.in/api/users?page=2
+
+users --> path parameter
+page=2 --> query parameter
+
+
+Headers: 
+
+	header name vlaue
+	header name value
+
+To work with seperate json file:
+
+1. Install node.js
+2. install json-server
+	In cmd execute - npm install json-server
+
+3. Start the server:
+	Go to the path where your json file is present
+	Open cmd and execute -> npx json-server UserList.json
+
+You will get the localhost URL with endpoint. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
